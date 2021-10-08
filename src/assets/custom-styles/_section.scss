@@ -1,0 +1,13 @@
+.section {
+  display: flex;
+  &-navigation {
+    width: 270px;
+  }
+}
+
+.content {
+  flex: 1;
+  &-navigation {
+    width: 150px;
+  }
+}
