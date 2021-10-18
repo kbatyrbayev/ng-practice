@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AngularComponent implements OnInit {
 
+  navigation:INav[] = [
+    {
+      id: 1, title: 'Компоненты в деталях',
+      child: [
+        {
+          id: 1, title: 'Как создавать компоненты', route: 'components',
+        },
+        {
+          id: 2, title: 'Передача данных', route: 'components',
+        }
+      ]
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+}
+
+
+interface INav {
+  id: number;
+  title: string;
+  route?: string;
+  child?: INav[];
+  isOpen?: boolean;
 }

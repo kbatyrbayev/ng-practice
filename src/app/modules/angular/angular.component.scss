@@ -1,1 +1,30 @@
 @import "~src/assets/custom-styles/section";
+.parent-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  span {
+    font-family: inherit;
+  }
+}
+
+
+ul {
+  li {
+    a {
+      color: rgb(68, 68, 68);
+      text-decoration: none;
+      font-family: inherit;
+      display: flex;
+      justify-content: space-between;
+      &.active {
+        color: rgb(22, 105, 187);
+      }
+    }
+  }
+}
+

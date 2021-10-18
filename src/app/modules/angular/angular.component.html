@@ -1,13 +1,26 @@
 <div class="section">
   <nav class="section-navigation">
     <ul>
-      <li>
-        Life cycle hooks
+      <li *ngFor="let nav of navigation">
+        <a  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
+              class="parent-item" (click)="nav.isOpen = !nav.isOpen">
+          <span>
+            {{nav?.title}}
+          </span>
+          <mat-icon>{{'keyboard_arrow_' + (nav.isOpen ? 'down' : 'right')}}</mat-icon>
+        </a>
+        <ng-container *ngIf="nav.isOpen">
+          <ul *ngFor="let child of nav?.child">
+            <a routerLink="{{child.route}}" routerLinkActive="active">
+              {{child?.title}}
+            </a>
+          </ul>
+        </ng-container>
       </li>
     </ul>
   </nav>
   <div class="content">
-    content
+    <router-outlet></router-outlet>
   </div>
   <nav class="content-navigation">
     <ul>
