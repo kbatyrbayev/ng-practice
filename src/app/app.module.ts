@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './common-components/not-found/not-found.component';
-import {HeaderComponent} from "./common-components/header/header.component";
-import {FooterComponent} from "./common-components/footer/footer.component";
+import { HeaderComponent } from './common-components/header/header.component';
+import { FooterComponent } from './common-components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgMaterialModule} from "./modules/ng-material";
+import { NgMaterialModule } from './modules/ng-material';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import {NgMaterialModule} from "./modules/ng-material";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgMaterialModule
+    NgMaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

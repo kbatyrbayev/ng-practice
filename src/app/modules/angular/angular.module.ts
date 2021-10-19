@@ -5,7 +5,8 @@ import { AngularRoutingModule } from './angular-routing.module';
 import { ComponentSectionComponent } from './sections/component-section.component';
 import { NgMaterialModule } from '../ng-material';
 import { Section2Component } from './sections/section2.component';
-import {Section3Component} from "./sections/section3.component";
+import { Section3Component } from './sections/section3.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,6 @@ import {Section3Component} from "./sections/section3.component";
     Section2Component,
     Section3Component,
   ],
-  imports: [CommonModule, AngularRoutingModule, NgMaterialModule],
+  imports: [CommonModule, AngularRoutingModule, NgMaterialModule, SharedModule],
 })
 export class AngularModule {}
