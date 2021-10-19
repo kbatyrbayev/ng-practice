@@ -1,32 +1,31 @@
 <div class="section">
   <nav class="section-navigation">
-    <ul>
-      <li *ngFor="let nav of navigation">
-        <a  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
-              class="parent-item" (click)="nav.isOpen = !nav.isOpen">
+    <ul *ngFor="let nav of navigation"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a
+        class="parent-item" (click)="nav.isOpen = !nav.isOpen">
           <span>
             {{nav?.title}}
           </span>
-          <mat-icon>{{'keyboard_arrow_' + (nav.isOpen ? 'down' : 'right')}}</mat-icon>
-        </a>
-        <ng-container *ngIf="nav.isOpen">
-          <ul *ngFor="let child of nav?.child">
-            <a routerLink="{{child.route}}" routerLinkActive="active">
-              {{child?.title}}
-            </a>
-          </ul>
-        </ng-container>
-      </li>
+        <mat-icon>{{'keyboard_arrow_' + (nav.isOpen ? 'down' : 'right')}}</mat-icon>
+      </a>
+      <ul [ngClass]="nav.isOpen ? 'expanded' : 'collapsed'">
+        <li *ngFor="let child of nav?.child">
+          <a routerLink="{{child.route}}" routerLinkActive="active">
+            {{child?.title}}
+          </a>
+        </li>
+      </ul>
     </ul>
   </nav>
   <div class="content">
     <router-outlet></router-outlet>
   </div>
   <nav class="content-navigation">
-    <ul>
-      <li>ngOnChanges</li>
-      <li>ngOnInit</li>
-      <li>ngOnDestroy</li>
-    </ul>
+<!--    <ul>-->
+<!--      <li>ngOnChanges</li>-->
+<!--      <li>ngOnInit</li>-->
+<!--      <li>ngOnDestroy</li>-->
+<!--    </ul>-->
   </nav>
 </div>

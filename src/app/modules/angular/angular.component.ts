@@ -3,31 +3,48 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-angular',
   templateUrl: './angular.component.html',
-  styleUrls: ['./angular.component.scss']
+  styleUrls: ['./angular.component.scss'],
 })
 export class AngularComponent implements OnInit {
-
-  navigation:INav[] = [
+  navigation: INav[] = [
     {
-      id: 1, title: 'Компоненты в деталях',
+      id: 1,
+      title: 'Компоненты в деталях',
       child: [
         {
-          id: 1, title: 'Как создавать компоненты', route: 'components',
+          id: 1,
+          title: 'Как создавать компоненты',
+          route: 'components',
         },
         {
-          id: 2, title: 'Передача данных', route: 'components',
-        }
-      ]
-    }
+          id: 2,
+          title: 'Передача данных',
+          route: 'input-output',
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: 'Компоненты в деталях2',
+      child: [
+        {
+          id: 1,
+          title: 'Как создавать компоненты',
+          route: 'section-3',
+        },
+        {
+          id: 2,
+          title: 'Передача данных',
+          route: 'input-output2',
+        },
+      ],
+    },
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
-
 
 interface INav {
   id: number;
