@@ -23,22 +23,6 @@ export class AngularComponent implements OnInit {
         },
       ],
     },
-    {
-      id: 2,
-      title: 'Компоненты в деталях2',
-      child: [
-        {
-          id: 1,
-          title: 'Как создавать компоненты',
-          route: 'section-3',
-        },
-        {
-          id: 2,
-          title: 'Передача данных',
-          route: 'input-output2',
-        },
-      ],
-    },
   ];
 
   constructor() {}
