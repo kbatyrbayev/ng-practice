@@ -1,8 +1,12 @@
 .section {
   display: flex;
   padding: 0 10px;
+  height: 100%;
+
   &-navigation {
     width: 270px;
+    background: #F2F2F2;
+    border-right: 1px solid #DBDBDB;
   }
 }
 
