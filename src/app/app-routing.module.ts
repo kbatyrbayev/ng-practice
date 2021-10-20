@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/type-script/type-script.module').then(m => m.TypeScriptModule)
   },
   {
+    path: 'javascript',
+    loadChildren: () => import('./modules/js/js.module').then(m => m.JsModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

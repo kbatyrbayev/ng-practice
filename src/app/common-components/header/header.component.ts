@@ -60,7 +60,7 @@ export class HeaderComponent implements OnInit {
     { id: 1, route: 'angular' },
     { id: 2, route: 'typescript' },
     { id: 3, route: 'RXJS' },
-    { id: 4, route: 'Javascript' },
+    { id: 4, route: 'javascript' },
     { id: 5, route: 'HTML' },
     { id: 6, route: 'CSS' },
   ];

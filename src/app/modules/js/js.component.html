@@ -1,0 +1,23 @@
+<div class="section">
+  <nav class="section-navigation">
+    <ul *ngFor="let nav of navigation"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a
+        class="parent-item" [routerLink]="nav.router" routerLinkActive="active">
+          <span>
+            {{nav?.title}}
+          </span>
+      </a>
+    </ul>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <nav class="content-navigation">
+<!--    <ul>-->
+<!--      <li>ngOnChanges</li>-->
+<!--      <li>ngOnInit</li>-->
+<!--      <li>ngOnDestroy</li>-->
+<!--    </ul>-->
+  </nav>
+</div>
